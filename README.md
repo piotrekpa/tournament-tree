@@ -46,7 +46,6 @@ W separatorze można umieszczać np. wyniki meczów `<div class="sep"><span>1:0<
 ### CSS
 Działa w oparciu o stylusa.
 Musimy zaimportować plik tournament_css.styl `@import "tournament_styl.styl"`. Następnie wykonujemy mixin `tournamentTree(ilość poziomów)`.
-Gdzie ilość poziomów nie determinuje faktycznie wyświetlanej ilości - jest to przewidywana ilość. Póki co polecaną ilością są 4 poziomy, w innym przypadku trzeba zmienić obrazki.
 
 	@import "tournament_tree.styl"
 
@@ -56,6 +55,6 @@ Gdzie ilość poziomów nie determinuje faktycznie wyświetlanej ilości - jest 
 
 Dodatkowo mamy możemy ustawić takie zmienne jak:
 
-`grid-height` - wysokość jednego elementu z graczem. Ma wpływ na wysokości innych elementów drzewa. Podawana w jednostach nierelatywnych.
-`font-size` - wysokość czcionki w elementach takich jak `.player` oraz `.sep`. Podawana w jednostkach nierelatywnych.
+* `grid-height` - wysokość jednego elementu z graczem. Ma wpływ na wysokości innych elementów drzewa. Podawana w jednostach nierelatywnych.
+* `font-size` - wysokość czcionki w elementach takich jak `.player` oraz `.sep`. Podawana w jednostkach nierelatywnych.
 

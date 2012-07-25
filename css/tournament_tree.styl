@@ -1,6 +1,7 @@
 grid-height = 30px
 font-size = 12px
 player-width = 30%
+horizontal-line-left = 45%
 
 level(n){
 	.battle {
@@ -31,13 +32,14 @@ tournamentTree(n)
 		width:980px;
 
 		.level {width:level-width;float:left;position:relative;} /* (100 / levels) * 100%;  */
-		.level > .battle {position:relative;}
-		.level > .battle > article {background-repeat:no-repeat;background-position:42% 50%;height:3em;}
-		.level > .battle > article.player-1 {background-image:url('../gfx/player-top.png');/*margin-top:1em;*/}
-		.level > .battle > article.player-2 {background-image:url('../gfx/player-bottom.png');/*margin-bottom:1em;*/}
-		.level .sep {width:100%;line-height:1em;height:1em;display:block;background:url('../gfx/vs.png') no-repeat 42% 50%;position:relative;}
-		.level .sep > span {font-size:font-size;position:absolute;left:50%;top:50%;line-height:2em;margin-top:-1em;}
-		.level > .battle > article .in {font-size:font-size;background:#fff;border:1px solid rgba(0,0,0,1);width:player-width;/*margin:-1px 0;*/border-radius:5px;height:100%;position:relative;}
+		.battle {position:relative;}
+		.player {background-repeat:no-repeat;background-position: horizontal-line-left 50%;height:3em;}
+		.player-1 {background-image:url('../gfx/player-top.png');/*margin-top:1em;*/}
+		.player-2 {background-image:url('../gfx/player-bottom.png');/*margin-bottom:1em;*/}
+		.sep {width:100%;line-height:1em;height:1em;display:block;background:url('../gfx/sep.png') no-repeat horizontal-line-left 50%;position:relative;}
+		.sep > span {font-size:font-size;position:absolute;left:50%;top:50%;line-height:2em;margin-top:-1em;}
+		.level.final .sep {background:url('../gfx/sep-final.png') repeat-y horizontal-line-left 50%;}
+		.player .in {font-size:font-size;background:#fff;border:1px solid rgba(0,0,0,1);width:player-width;/*margin:-1px 0;*/border-radius:5px;height:100%;position:relative;}
 
 	}
 	

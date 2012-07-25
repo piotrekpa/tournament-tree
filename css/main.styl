@@ -3,8 +3,13 @@
 body {font-family: Tahoma,Verdana,Arial,sans-serif;}
 
 grid-height = 12px
+horizontal-line-left = 44%
 tournamentTree(4)
 
+.tournament-tree {width:770px;}
+.tournament-tree .level .sep > span {left:auto;right:25%;}
+.tournament-tree .level > .battle > article .in {border-radius:10px;border-color:#bfbfbf;width:50%;line-height:grid-height * 3;padding:0 5px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 		
-
+.tournament-tree .win-1 .player-1 .in,
+.tournament-tree .win-2 .player-2 .in {background:#e6e6e6;}
 

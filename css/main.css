@@ -11,31 +11,31 @@ body {
   float: left;
   position: relative;
 }
-.tournament-tree .level > .battle {
+.tournament-tree .battle {
   position: relative;
 }
-.tournament-tree .level > .battle > article {
+.tournament-tree .player {
   background-repeat: no-repeat;
-  background-position: 42% 50%;
+  background-position: 44% 50%;
   height: 3em;
 }
-.tournament-tree .level > .battle > article.player-1 {
+.tournament-tree .player-1 {
   background-image: url("../gfx/player-top.png");
 /*margin-top:1em;*/
 }
-.tournament-tree .level > .battle > article.player-2 {
+.tournament-tree .player-2 {
   background-image: url("../gfx/player-bottom.png");
 /*margin-bottom:1em;*/
 }
-.tournament-tree .level .sep {
+.tournament-tree .sep {
   width: 100%;
   line-height: 1em;
   height: 1em;
   display: block;
-  background: url("../gfx/vs.png") no-repeat 42% 50%;
+  background: url("../gfx/sep.png") no-repeat 44% 50%;
   position: relative;
 }
-.tournament-tree .level .sep > span {
+.tournament-tree .sep > span {
   font-size: 12px;
   position: absolute;
   left: 50%;
@@ -43,7 +43,10 @@ body {
   line-height: 2em;
   margin-top: -1em;
 }
-.tournament-tree .level > .battle > article .in {
+.tournament-tree .level.final .sep {
+  background: url("../gfx/sep-final.png") repeat-y 44% 50%;
+}
+.tournament-tree .player .in {
   font-size: 12px;
   background: #fff;
   border: 1px solid #000;
@@ -80,4 +83,25 @@ body {
 }
 .tournament-tree .level-4 .sep {
   height: 29em;
+}
+.tournament-tree {
+  width: 770px;
+}
+.tournament-tree .level .sep > span {
+  left: auto;
+  right: 25%;
+}
+.tournament-tree .level > .battle > article .in {
+  border-radius: 10px;
+  border-color: #bfbfbf;
+  width: 50%;
+  line-height: 36px;
+  padding: 0 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tournament-tree .win-1 .player-1 .in,
+.tournament-tree .win-2 .player-2 .in {
+  background: #e6e6e6;
 }
