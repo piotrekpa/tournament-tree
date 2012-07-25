@@ -1,50 +1,83 @@
-body {font-family: Tahoma,Verdana,Arial,sans-serif;}
-
-.rank {font-size:30px;width:980px;}
-
-.level {width:25%;float:left;position:relative;} /* (100 / levels) * 100%;  */
-
-.level > .battle {position:relative;}
-.level > .battle > article {background:url('../gfx/horizontal.png') no-repeat 42% 50%;height:1em;}
-.level > .battle > article.player-1 {background-image:url('../gfx/player-top.png');/*margin-top:1em;*/}
-.level > .battle > article.player-2 {background-image:url('../gfx/player-bottom.png');/*margin-bottom:1em;*/}
-.level .sep {width:100%;line-height:1em;height:1em;display:block;text-indent:60%;background:url('../gfx/vs.png') no-repeat 42% 50%;}
-.level > .battle > article .in {font-size:12px;background:#fff;border:1px solid rgba(0,0,0,1);width:30%;/*margin:-1px 0;*/border-radius:5px;height:100%;position:relative;}
-
-
-/*.levels-4 .level-4 {padding-top:0em;}
-.levels-4 .level-4 .vs {height:2em;line-height:2em;}
-
-.levels-4 .level-3 {padding-top:2.5em;}
-.levels-4 .level-3 .vs {height:7em;line-height:7em;}
-.levels-4 .level-3 .battle {margin-bottom:5em;}
-
-.levels-4 .level-2 {padding-top:5em;}
-.levels-4 .level-2 .vs {height:7em;line-height:7em;}
-
-.levels-4 .level-1 {padding-top:7.5em;}*/
-
-/*---*/
-
-/*.level-1 .battle {padding-top:1em;padding-bottom:1em;}
-.level-1 .sep {height:1em;line-height:1em;}
-
-.level-2 .battle {padding-top:2em;padding-bottom:2em;}
-.level-2 .sep {height:4em;line-height:4em;}
-
-.level-3 .battle {padding-top:4.5em;padding-bottom:4.5em;}
-.level-3 .sep {height:9em;line-height:9em;}
-
-.level-4 .battle {padding-top:7em;}
-.level-5 {padding-top:4em;}*/
-
-.level-1 .battle {padding-top:1em;}
-.level-1 .sep {height:1em;line-height:1em;}
-
-.level-2 .battle {padding-top:2em;padding-bottom:1em;}
-.level-2 .sep {height:3em;line-height:3em;}
-
-.level-3 .battle {padding-top:4em;padding-bottom:2em;}
-.level-3 .sep {height:7em;line-height:7em;}
-
-.level-4 .battle {padding-top:8em;}
+body {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+.tournament-tree {
+  font-size: 30px;
+  width: 980px;
+/* (100 / levels) * 100%;  */
+}
+.tournament-tree .level {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+.tournament-tree .level > .battle {
+  position: relative;
+}
+.tournament-tree .level > .battle > article {
+  background-repeat: no-repeat;
+  background-position: 42% 50%;
+  height: 1em;
+}
+.tournament-tree .level > .battle > article.player-1 {
+  background-image: url("../gfx/player-top.png");
+/*margin-top:1em;*/
+}
+.tournament-tree .level > .battle > article.player-2 {
+  background-image: url("../gfx/player-bottom.png");
+/*margin-bottom:1em;*/
+}
+.tournament-tree .level .sep {
+  width: 100%;
+  line-height: 1em;
+  height: 1em;
+  display: block;
+  background: url("../gfx/vs.png") no-repeat 42% 50%;
+  position: relative;
+}
+.tournament-tree .level .sep > span {
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  line-height: 2em;
+  margin-top: -1em;
+}
+.tournament-tree .level > .battle > article .in {
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #000;
+  width: 30%;
+/*margin:-1px 0;*/
+  border-radius: 5px;
+  height: 100%;
+  position: relative;
+}
+.tournament-tree .level-1 .battle {
+  padding-top: 1em;
+  padding-bottom: 0em;
+}
+.tournament-tree .level-1 .sep {
+  height: 1em;
+}
+.tournament-tree .level-2 .battle {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.tournament-tree .level-2 .sep {
+  height: 3em;
+}
+.tournament-tree .level-3 .battle {
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+.tournament-tree .level-3 .sep {
+  height: 7em;
+}
+.tournament-tree .level-4 .battle {
+  padding-top: 8em;
+  padding-bottom: 7em;
+}
+.tournament-tree .level-4 .sep {
+  height: 15em;
+}
