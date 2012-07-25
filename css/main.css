@@ -2,7 +2,7 @@ body {
   font-family: Tahoma, Verdana, Arial, sans-serif;
 }
 .tournament-tree {
-  font-size: 30px;
+  font-size: 12px;
   width: 980px;
 /* (100 / levels) * 100%;  */
 }
@@ -17,7 +17,7 @@ body {
 .tournament-tree .level > .battle > article {
   background-repeat: no-repeat;
   background-position: 42% 50%;
-  height: 1em;
+  height: 3em;
 }
 .tournament-tree .level > .battle > article.player-1 {
   background-image: url("../gfx/player-top.png");
@@ -61,23 +61,23 @@ body {
   height: 1em;
 }
 .tournament-tree .level-2 .battle {
-  padding-top: 2em;
-  padding-bottom: 1em;
+  padding-top: 3em;
+  padding-bottom: 2em;
 }
 .tournament-tree .level-2 .sep {
-  height: 3em;
+  height: 5em;
 }
 .tournament-tree .level-3 .battle {
-  padding-top: 4em;
-  padding-bottom: 3em;
+  padding-top: 7em;
+  padding-bottom: 6em;
 }
 .tournament-tree .level-3 .sep {
-  height: 7em;
+  height: 13em;
 }
 .tournament-tree .level-4 .battle {
-  padding-top: 8em;
-  padding-bottom: 7em;
+  padding-top: 15em;
+  padding-bottom: 14em;
 }
 .tournament-tree .level-4 .sep {
-  height: 15em;
+  height: 29em;
 }

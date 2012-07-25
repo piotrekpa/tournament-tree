@@ -4,11 +4,11 @@ player-width = 30%
 
 level(n){
 	.battle {
-		padding-top:unit(2 ** (n - 1),'em');
-		padding-bottom:unit((2** ( n - 1)) - 1,'em');
+		padding-top:unit(recursion(n, 1),'em');
+		padding-bottom:unit(recursion(n, 2, 0),'em');
 	}
 	.sep {
-		height:unit(sepHeight(n), 'em');
+		height:unit(recursion(n, 3), 'em');
 	}
 }
 
@@ -16,8 +16,13 @@ sepHeight(n)
 	if n == 1
 		1
 	else
-		2 * sepHeight(n - 1) + 1
+		2 * sepHeight(n - 1) + 3
 
+recursion(n, x, last = 1)
+	if n == 1
+		last
+	else
+		2 * recursion(n - 1, x, last) + x
 
 tournamentTree(n)
 	level-width = unit(100 / n, '%')
@@ -27,7 +32,7 @@ tournamentTree(n)
 
 		.level {width:level-width;float:left;position:relative;} /* (100 / levels) * 100%;  */
 		.level > .battle {position:relative;}
-		.level > .battle > article {background-repeat:no-repeat;background-position:42% 50%;height:1em;}
+		.level > .battle > article {background-repeat:no-repeat;background-position:42% 50%;height:3em;}
 		.level > .battle > article.player-1 {background-image:url('../gfx/player-top.png');/*margin-top:1em;*/}
 		.level > .battle > article.player-2 {background-image:url('../gfx/player-bottom.png');/*margin-bottom:1em;*/}
 		.level .sep {width:100%;line-height:1em;height:1em;display:block;background:url('../gfx/vs.png') no-repeat 42% 50%;position:relative;}
